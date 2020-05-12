@@ -1,1 +1,18 @@
 // Mixins in here
+.font-size(@size){
+    font-size: @size;
+}
+.flex(@justify, @align){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+.btn(@width, @border-radius, @padding){
+    width: 80%;
+    background: @eastern-blue;
+    color: @white;
+    .flex(center, center);
+    border-radius: 7%;
+    padding: 5%;
+    .font-size(2rem);
+  }
