@@ -1,22 +1,57 @@
 .home {
+  header{
+    .flex(space-between, center);
+    margin: 10% 0;
+    border-bottom: 3px dashed @silver;
+    @media(@mobile){
+        flex-direction: column;
+    }
+    h1{
+      @media(@mobile){
+        .flex(center, center);
+        width: 90%;
+      }
+      padding: 2%;
+      font-weight: 500;
+    }
 
+    
+  }
+  .intro{
+    padding: 2% 0;
+    border-bottom:  3px dashed @silver;
+  }
+ 
+  
+  
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media(@mobile){
+      flex-direction: column;
+      justify-content: center;
+
+    }
 
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media(@mobile){
+        width: 90%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media(@mobile){
+        width: 100%;
+        .flex(center, center);
+      }
       img {
         border-radius: 10px;
       }
@@ -26,6 +61,9 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media(@mobile){
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -35,15 +73,25 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media(@mobile){
+        .flex(center, center);
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media(@mobile){
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
+      @media(@mobile){
+        width: 90%;
+        .flex(center, center);
+      }
     }
   }
 
@@ -52,10 +100,28 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media(@mobile){
+      flex-direction: column;
+      .flex(center, center);
+      
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media(@mobile){
+        width: 100%;
+        
+      }
+      .btn{
+        .btn(80%, 7%, 2%);
+        @media(@mobile){
+          width: 100%;
+          // margin: 2%;
+        }
+        
+      }
+      
     }
   }
 }// home
